@@ -1,248 +1,435 @@
 <!DOCTYPE html>
-
+<html lang="ja">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>名曲 ~室内楽の時間~</title>
     <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-      .container {
-        display: flex;
-        align-items: center;
-      }
+        .container, .wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 1rem;
+            text-align: center;
+        }
 
-      .highlighter_01 {
-        background-color:#FFFFFF;
-        color:#17406D;
-      }
+        .center {
+          text-align: center;
+        }
 
-      .highlighter_02 {
-        background: linear-gradient(#17406D 100% 100%);
-        color:#ffffff;
-      }
+        .headcolor {
+            background-color: #17406D;
+            font-size: 1.875rem;
+            padding: 1rem;
+            color: #fff;
+        }
 
-      .headcolor{
-        background-color:#17406D;
-        font-size: 30px;
-      }
+        .highlighter_01 {
+            background-color: #FFFFFF;
+            color: #17406D;
+        }
 
-      .footcolor{
-        background-color:#17406D;
-        color:#ffffff;
-      }
+        .highlighter_02 {
+            background: linear-gradient(#17406D 100% 100%);
+            color: #ffffff;
+        }
 
-      .bodycolor{
-        background-color: #000000;
-        color: #FFFFFF;
-      }
-      .wrapper {
-        max-width: 400px;
-        margin: 0 auto;
-        text-align: center;
-      }
+        .border-blue, .border-yellow, .border-white {
+            margin: 1rem auto;
+            color: #17406D;
+            text-align: center;
+        }
 
-      .txt {
-        display: inline-block;
-        text-align: left;
-      }
+        .border-blue {
+            background-color: #17406D;
+            color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 40px;
+            max-width: 100%;
+        }
 
-      .text-wrapper {
-        display: flex; /* 縦方向のフレックスボックス */
-        align-items: center; /* 縦方向の中央揃え */
-        text-align: left; /* テキストを左揃え */
-      }
-      .border-blue {
-        background-color: #17406D;
-        border: 1px solid #17406D;
-        border-radius: 40px;
-        max-width: 500px;
-        margin: 20px auto;
-        text-align: center;
-      }
+        .border-yellow {
+            background-color: #FFDA03;
+            color: #17406D;
+            padding: 1rem;
+            border-radius: 40px;
+            max-width: 100%;
+            text-align: center;
+        }
 
-      .border-yellow {
-        background-color: #FFDA03;
-        border: 1px solid #FFDA03;
-        color: #17406D;
-        border-radius: 40px;
-        max-width: 500px;
-        margin: 20px auto;
-        text-align: center;
-      }
+        .border-white {
+          background-color: #FFFFFF;
+          color: #17406D;
+          padding: 0.3rem;
+          border-radius: 40px;
+          max-width: 50%;
+        }
+
+        .footcolor {
+            background-color: #17406D;
+            color: #ffffff;
+            padding: 1rem;
+            font-size: 0.875rem;
+        }
+
+        h2, h1 {
+            margin: 0.5rem 0;
+        }
+
+        .program-title {
+            cursor: pointer;
+        }
+
+        .align-right {
+          text-align: right;
+          padding-right: 10px; /* 任意でセル内のスペース調整 */
+        }
+
+        /* アニメーション用のコンテナスタイル */
+        .details-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease; /* max-heightをアニメーション */
+        }
+
+        .details-content.open {
+            max-height: 900px; /* アニメーションのために十分に大きな値に設定 */
+        }
+
+        .centered-paragraph {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center; /* 必要に応じてテキストを中央揃えに */
+        }
      </style>
+
+<script>
+      function toggleDetails(id) {
+          const element = document.getElementById(id);
+          const titleElement = document.querySelector(`[data-id="${id}"]`);
+
+            // 開閉状態の切り替え
+            element.classList.toggle('open');
+            titleElement.classList.toggle('open');
+      }
+</script>
+
+
    </head>
-
-   <div class = "bodycolor"> 
    <body>
-        <center>
-          <div class = "headcolor">
-        <h1>
-          <span class="highlighter_01">名</span>
-          <span class="highlighter_02">曲</span>
-          </h1>
-          <h2>
-          <span class="highlighter_02">~室内楽の時間~</span>
-        </h2>
+    <div class = "container"> 
+        <div class = "headcolor">
+        <h1><span class="highlighter_01">名</span><span class="highlighter_02">曲</span></h1>
+        <h2><span class="highlighter_02">~室内楽の時間~</span></h2>
           </div>
-        </center>
-
 
       <h2 class = "wrapper">
-        2024年11月15日(金)<br>
-        遠友学舎(談話ラウンジ)<br>
-        18:30(開場18:15)
+        2024年11月15日(金)<br>18:30(開場18:15)<br>遠友学舎(談話ラウンジ)
       </h2>
+        <p>〒001-0018<br>北海道札幌市北区<br>北18条西7丁目</p>
         <p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1482.5178363570355!2d141.34047885706119!3d43.08143620973188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2903693e824d%3A0x8fd4b29f04bf2bdc!2z6YGg5Y-L5a2m6IiO!5e0!3m2!1sen!2sjp!4v1729625883556!5m2!1sen!2sjp" width="300" height="300" style="border: 0; display: block; margin: 0 auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1482.5178363570355!2d141.34047885706119!3d43.08143620973188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2903693e824d%3A0x8fd4b29f04bf2bdc!2z6YGg5Y-L5a2m6IiO!5e0!3m2!1sen!2sjp!4v1729625883556!5m2!1sen!2sjp" width="300" height="300" style="border: 0; display: block; margin: 0 auto 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </p>
-
-<center>
+<!-- ここにスペース -->
+<div class = "center">
 <h1><strong>プログラム</strong></h1>
 <p>曲目部分をタップすると詳細が開閉します。</p>
-</center>
+</div>
 
-
-<div class = "border-blue">
-<center>
-  <span onclick="obj=document.getElementById('open4').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">シューマン<br>弦楽四重奏曲第1番<br>第4楽章</h2>
-</span></center>
-  <span id="open4" style="display: none; clear: both;">
+<div class="border-blue">
+  <h2 class="program-title" onclick="toggleDetails('open1')">シューマン<br>弦楽四重奏曲第1番<br>第4楽章</h2>
+  <div id="open1" class="details-content">
     <div class="wrapper">
-      
-      <!-- <img src = "schumann.jpg" alt="Schumann" width="100" height="100"> -->
-                  <p style = "text-align: left;" class="txt">
-                    &nbsp;&nbsp;Vn1s 工藤遥<br>Vn2nd 藤野歩果<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Va 土井優瞳　<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vc 志田篤紀
-                  </p>
-<p style = "text-align: left;">あああああああああああああああああああああああああああああああああああああああああああああ</p>
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>工藤遥</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>藤野歩果</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va</td>
+          <td>土井優瞳</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc</td>
+          <td>志田篤紀</td>
+        </tr>
+      </table>
+    </div>
+    
+    
+      <p class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">まだ考えてない</p>
+  </div>
 </div>
-</span>
-</div>
+  
 
-<div class = "border-yellow">
-<center>
-  <span onclick="obj=document.getElementById('open2').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">ドヴォルザーク<br>弦楽五重奏曲第3番<br>第1楽章</h2>
-</span></center>
-  <span id="open2" style="display: none; clear: both;">
+<div class="border-yellow">
+  <h2 class="program-title" onclick="toggleDetails('open2')">ドヴォルザーク<br>弦楽五重奏曲第3番<br>第1楽章</h2>
+  <div id="open2" class="details-content">
     <div class="wrapper">
-      <!-- <img src = "dvorak.jpg" alt="Dvorak" width="100" height="100"> -->
-  <p class="txt">
-    &nbsp;Vn1st 上澤杏佳<br>Vn2nd 渡井崇弘<br>
-&nbsp;&nbsp;Va1st 林優衣乃<br>&nbsp;Va2nd 東海林里香<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vc 志田篤紀
-</p>
-  <p style = "text-align: left;">ああああああああああああああああああああああああああああああああああああああああ</p>
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>上澤杏佳</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>渡井崇弘</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va1st</td>
+          <td>林優衣乃</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va2nd</td>
+          <td>東海林里香</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc</td>
+          <td>志田篤紀</td>
+        </tr>
+      </table>
+    </div>
+    <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">まだ考えてない</p>
 </div>
-</span>
 </div>
 
-<div class = "border-blue">
-<center>
-  <span onclick="obj=document.getElementById('open3').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">チャイコフスキー<br>弦楽六重奏曲「フィレンツェの思い出」<br>第1楽章</h2>
-</span></center>
-  <span id="open3" style="display: none; clear: both;">
+<div class="border-blue">
+  <h2 class="program-title" onclick="toggleDetails('open3')">チャイコフスキー<br>弦楽六重奏曲「フィレンツェの思い出」<br>第1楽章</h2>
+  <div id="open3" class="details-content">
     <div class="wrapper">
-        <!-- <img src = "tchaikovsky.jpg".jpg" alt="Tchaikovsky" width="100" height="100"> -->
-  <p class="txt">
-    &nbsp;Vn1st 武田柚希<br>Vn2nd 藤野歩果<br>
-&nbsp;&nbsp;Va1st 勝又十勝<br>&nbsp;Va2nd 手島柊子<br>
-&nbsp;&nbsp;Vc1st 川端祥太郎<br>&nbsp;Vc2nd 柴垣匠汰
-</p>
-
-  <p style = "text-align: left;">あああああああああああああああああああああああああああああああああああああああああ</p>
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>武田柚希</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>藤野歩果</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va1st</td>
+          <td>勝又十勝</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va2nd</td>
+          <td>手島柊子</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc1st</td>
+          <td>川端祥太郎</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc2nd</td>
+          <td>柴垣匠汰</td>
+        </tr>
+      </table>
+    </div>
+  <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">ロマン派時代の作曲家であり、現在でもロシアを代表する作曲家として知られるチャイコフスキー。
+    彼はモスクワ音楽院の教職を辞し、作曲に専念するためにヨーロッパ各地を転々としました。そんな中、フィレンツェ滞在中に作曲されたこの作品は、彼が最後に手がけた室内楽曲でもあります。
+    激しくも旋律的な第一主題と穏やかな流れの第二主題が対比されるとともに、対位法を駆使した複雑で豊かな響きが特徴のこの作品は、まさに唯一無二の"名曲"と言えるでしょう。
+  </p>
 </div>
-</span>
 </div>
 
-<div class = "border-yellow">
-<center>
-  <span onclick="obj=document.getElementById('open0').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">バッハ<br>ブランデンブルク協奏曲第3番</h2>
-</span></center>
-  <span id="open0" style="display: none; clear: both;">
+
+
+
+<div class = "border-white">
+  <h2>~ 休憩 ~</h2>
+</div>
+
+
+  <div class="border-yellow">
+    <h2 class="program-title" onclick="toggleDetails('open4')">バッハ<br>ブランデンブルク協奏曲第3番</h2>
+  <div id="open4" class="details-content">
     <div class="wrapper">
-      <!-- <img src = "bach.jpg" alt="Bach" width="100" height="100"> -->
-<p class="txt">
-  &nbsp;Vn1st 大廣舞<br>Vn2nd 今村喬<br>Vn3rd 阿久津泰平<br>
-  &nbsp;Va1st 岡村朝瑚<br>Va2nd 手島柊子<br>&nbsp;Va3rd 土井優瞳<br>
-  &nbsp;Vc1st 片平朋奈実<br>Vc2nd 和田幹葵<br>&nbsp;Vc3rd 品村晶子
-</p>
-  <p style = "text-align: left;">ああああああああああああああああああああああああああああああああああああああああああ</p>
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>大廣舞</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>今村喬</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn3rd</td>
+          <td>阿久津泰平</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va1st</td>
+          <td>岡村朝瑚</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va2nd</td>
+          <td>手島柊子</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va3rd</td>
+          <td>土井優瞳</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc1st</td>
+          <td>片平朋奈実</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc2nd</td>
+          <td>和田幹葵</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc3rd</td>
+          <td>品村晶子
+          </td>
+        </tr>
+        </table>
+    </div>
+
+    <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">バロック音楽の重要な作曲家であり、後世にも大きな影響を与えたことから「音楽の父」としても名高いバッハ。
+ブランデンブルク辺境爵に献呈されたこの曲は、6つの独立した合奏協奏曲からなっています。
+このうち今回演奏する第3番はバイオリン、ビオラ、チェロが3人ずつの弦楽アンサンブルです。複雑で技巧的な構成でありながらバロック音楽の華やかさと調和を兼ね備えており、バロック音楽の"名曲"の一つと言えるでしょう。
+  </p>
 </div>
-  </span>
 </div>
 
   <div class = "border-blue">
-<center>
-  <span onclick="obj=document.getElementById('open1').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">ブラームス<br>弦楽六重奏曲第1番<br>第1楽章</h2>
-</span></center>
-  <span id="open1" style="display: none; clear: both;">
+  <h2 class="program-title" onclick="toggleDetails('open5')">ブラームス<br>弦楽六重奏曲第1番<br>第1楽章</h2>
+  <div id="open5" class="details-content">
     <div class="wrapper">
-        <!-- <img src = "brahms.jpeg" alt="Brahms" width="100" height="100"> -->
-  <p class="txt">
-    &nbsp;Vn1st 林優衣乃<br>Vn2nd 大橋洋也<br>
-    &nbsp;&nbsp;Va1st 東海林里香<br>&nbsp;Va2nd 勝又十勝<br>
-    &nbsp;&nbsp;Vc1st 柏本真拓<br>&nbsp;Vc2nd 川端祥太郎
-</p>
-
-  <p style = "text-align: left;">古典的伝統を大切にしながらロマン派の新しい表現手法を取り入れたブラームスですが、それまでほぼ存在しなかった「弦楽六重奏」という新しい室内楽の分野を開拓した先駆者でもあります。
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>林優衣乃</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>大橋洋也</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va1st</td>
+          <td>東海林里香</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va2nd</td>
+          <td>勝又十勝</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc1st</td>
+          <td>柏本真拓</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc2nd</td>
+          <td>川端祥太郎
+          </td>
+        </tr>
+      </table>
+    </div>
+  <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">古典的伝統を大切にしながらロマン派の新しい表現手法を取り入れたブラームスですが、それまでほぼ存在しなかった「弦楽六重奏」という新しい室内楽の分野を開拓した先駆者でもあります。
   27歳の時に書かれたこの作品は、古典派の巨匠たちの影響を受けることなく、若いブラームスの自由でのびやかな旋律とビオラとチェロを中心とした重厚な音色が特徴の名曲です。</p>
 </div>
-</span>
   </div>
 
-  <div class = "border-yellow">
-<center>
-  <span onclick="obj=document.getElementById('open5').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">ヴェーベルン<br>弦楽四重奏のための緩徐楽章</h2>
-</span></center>
-  <span id="open5" style="display: none; clear: both;">
+  <div class="border-yellow">
+    <h2 class="program-title" onclick="toggleDetails('open6')">ヴェーベルン<br>弦楽四重奏のための緩徐楽章</h2>
+  <div id="open6" class="details-content">
     <div class="wrapper">
-        <!-- <img src = "webern.jpg" alt="Webern" width="100" height="100"> -->
-  <p class="txt">
-    &nbsp;Vn1st 武田柚希<br>Vn2nd 大廣舞<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Va 工藤遥　　<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vc 志田篤紀
-</p>
-
-  <p style = "text-align: left;">ああああああああああああああああああああああああああああああああああああああああああああああ</p>
-  <!-- <p>シェーンベルクやベルクとともに「新ウィーン楽派」を代表する作曲家ヴェーベルン。若き日の名メロディー</p> -->
+      <table style="margin: 0 auto; text-align: left;">
+        <tr>
+          <td class="align-right">Vn1st</td>
+          <td>武田柚希</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vn2nd</td>
+          <td>大廣舞</td>
+        </tr>
+        <tr>
+          <td class="align-right">Va</td>
+          <td>工藤遥</td>
+        </tr>
+        <tr>
+          <td class="align-right">Vc</td>
+          <td>志田篤紀</td>
+        </tr>
+      </table>
+    </div>
+    <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">まだ考えてない</p>
 </div>
-</span>
   </div>
 
-<div class = "border-blue">
-<center>
-  <span onclick="obj=document.getElementById('open6').style; obj.display=
-(obj.display=='none')?'block':'none';"><h2 style="cursor:pointer;">メンデルスゾーン<br>弦楽八重奏曲<br>第1,4楽章</h2>
-</span></center>
-  <span id="open6" style="display: none; clear: both;">
-    <div class="wrapper">
-        <!-- <img src = "mendelssohn.jpg" alt="Mendelssohn" width="100" height="100"> -->
-  <p class="txt">
-    &nbsp;Vn1st 水江遼<br>Vn2nd 武田柚希<br>&nbsp;Vn3rd 工藤遥<br>&nbsp;Vn4th 今村喬<br>
-    &nbsp;&nbsp;Va1st 孫泰俊<br>&nbsp;Va2nd 勝又十勝<br>
-    &nbsp;&nbsp;Vc1st 和田瑛怜奈<br>&nbsp;Vc2nd 小林ゆうし
-</p>
 
-  <p style = "text-align: left;">ああああああああああああああああああああああああああああああああああああああああああ</p>
+  <div class = "border-white">
+    <h2>~ 休憩 ~</h2>
+  </div>
+
+  <div class="border-blue">
+    <h2 class="program-title" onclick="toggleDetails('open7')">メンデルスゾーン<br>弦楽八重奏曲<br>第1,4楽章</h2>
+    <div id="open7" class="details-content">
+      <div class="wrapper">
+        <table style="margin: 0 auto; text-align: left;">
+          <tr>
+            <td class="align-right">Vn1st</td>
+            <td>水江遼</td>
+          </tr>
+          <tr>
+            <td class="align-right">Vn2nd</td>
+            <td>武田柚希</td>
+          </tr>
+          <tr>
+            <td class="align-right">Vn3rd</td>
+            <td>工藤遥</td>
+          </tr>
+          <tr>
+            <td class="align-right">Vn4th</td>
+            <td>今村喬</td>
+          </tr>
+          <tr>
+            <td class="align-right">Va1st</td>
+            <td>孫泰俊</td>
+          </tr>
+          <tr>
+            <td class="align-right">Va2nd</td>
+            <td>勝又十勝</td>
+          </tr>
+          <tr>
+            <td class="align-right">Vc1st</td>
+            <td>和田瑛怜奈</td>
+          </tr>
+          <tr>
+            <td class="align-right">Vc2nd</td>
+            <td>森田昭徳</td>
+          </tr>
+          <tr><td colspan="3">(4楽章はVcパート入れ替え)</td></tr>
+        </table>
+      </div>
+  <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">
+    ロマン派初期のドイツの作曲家であり、豊かな旋律美と洗練された技法で知られるメンデルスゾーン。
+    16歳の時に書かれたこの曲は、古典的な形式、和声、対位法、色彩感を受け継ぎつつも、若い才能による快活さに溢れており室内楽の"名曲"と言えるでしょう。
+    生き生きとしたメロディによるソナタ形式の1楽章、8つのパートが絶妙に絡み合った華麗な対位法によるフィナーレの4楽章を、続けてお楽しみください。
+  </p>
 </div>
-</span>
 </div>
+
+  <div class = "wrapper"><h3>本日はお越しいただき誠にありがとうございました。</h3></div>
  
 
       <div class = "footcolor">
-      <div class="wrapper">
-        <p class="txt"><b>連絡先(勝又)</b>
+      <p><b>連絡先(勝又)</b>
         <br>katsumata.tokachi.n4(at)elms.hokudai.ac.jp
         <br>※(at)を@に読み替えてください。
       </p>
       <p class = "txt">Copyright (C) 2024 T.Katsumata</p>
       </div>
       </div>
-     </div>
 </body>
+</html>
