@@ -15,6 +15,7 @@
             padding: 0;
         }
 
+
         .container, .wrapper {
             max-width: 500px;
             margin: 0 auto;
@@ -30,7 +31,24 @@
             background-color: #17406D;
             font-size: 1.875rem;
             padding: 1rem;
-            color: #fff;
+            color: #FFFFFF;
+            width: 100vw;
+            position: relative; /* 必要に応じてレイアウトの調整が可能 */
+            left: 50%; /* 左にオフセットをつけて中心に */
+            transform: translateX(-50%); /* 中心に配置 */
+            box-sizing: border-box; /* パディングを含んだ状態で幅を100vwに */
+        }
+
+        .footcolor {
+            background-color: #17406D;
+            color: #FFFFFF;
+            padding: 1rem;
+            font-size: 0.875rem;
+            width: 100vw; /* ビューポートの幅に合わせる */
+            position: relative; /* 必要に応じてレイアウトの調整が可能 */
+            left: 50%; /* 左にオフセットをつけて中心に */
+            transform: translateX(-50%); /* 中心に配置 */
+            box-sizing: border-box; /* パディングを含んだ状態で幅を100vwに */
         }
 
         .highlighter_01 {
@@ -72,13 +90,6 @@
           padding: 0.3rem;
           border-radius: 40px;
           max-width: 50%;
-        }
-
-        .footcolor {
-            background-color: #17406D;
-            color: #ffffff;
-            padding: 1rem;
-            font-size: 0.875rem;
         }
 
         h2, h1 {
@@ -129,11 +140,11 @@
     <div class = "container"> 
         <div class = "headcolor">
         <h1><span class="highlighter_01">名</span><span class="highlighter_02">曲</span></h1>
-        <h2><span class="highlighter_02">~室内楽の時間~</span></h2>
+        <h2><span class="highlighter_02">~ 室内楽の時間 ~</span></h2>
           </div>
 
       <h2 class = "wrapper">
-        2024年11月15日(金)<br>18:30(開場18:15)<br>遠友学舎(談話ラウンジ)
+        2024年11月15日(金)<br>18:30（開場18:15）<br>遠友学舎（談話ラウンジ）
       </h2>
         <p>〒001-0018<br>北海道札幌市北区<br>北18条西7丁目</p>
         <p>
@@ -145,7 +156,7 @@
 <p>曲目部分をタップすると詳細が開閉します。</p>
 </div>
 
-<div class="border-blue">
+<div class="border-yellow">
   <h2 class="program-title" onclick="toggleDetails('open1')">シューマン<br>弦楽四重奏曲第1番<br>第4楽章</h2>
   <div id="open1" class="details-content">
     <div class="wrapper">
@@ -175,7 +186,7 @@
 </div>
   
 
-<div class="border-yellow">
+<div class="border-blue">
   <h2 class="program-title" onclick="toggleDetails('open2')">ドヴォルザーク<br>弦楽五重奏曲第3番<br>第1楽章</h2>
   <div id="open2" class="details-content">
     <div class="wrapper">
@@ -206,7 +217,7 @@
 </div>
 </div>
 
-<div class="border-blue">
+<div class="border-yellow">
   <h2 class="program-title" onclick="toggleDetails('open3')">チャイコフスキー<br>弦楽六重奏曲<br>「フィレンツェの思い出」<br>第1楽章</h2>
   <div id="open3" class="details-content">
     <div class="wrapper">
@@ -252,7 +263,7 @@
 </div>
 
 
-  <div class="border-yellow">
+  <div class="border-blue">
     <h2 class="program-title" onclick="toggleDetails('open4')">バッハ<br>ブランデンブルク協奏曲<br>第3番</h2>
   <div id="open4" class="details-content">
     <div class="wrapper">
@@ -304,7 +315,7 @@
 </div>
 </div>
 
-  <div class = "border-blue">
+  <div class = "border-yellow">
   <h2 class="program-title" onclick="toggleDetails('open5')">ブラームス<br>弦楽六重奏曲第1番<br>第1楽章</h2>
   <div id="open5" class="details-content">
     <div class="wrapper">
@@ -337,11 +348,11 @@
       </table>
     </div>
   <p  class="centered-paragraph" style = "text-align: left; margin-bottom: 20px;">古典的伝統を大切にしながらロマン派の新しい表現手法を取り入れたブラームスですが、それまでほぼ存在しなかった「弦楽六重奏」という新しい室内楽の分野を開拓した先駆者でもあります。
-  27歳の時に書かれたこの作品は、古典派の巨匠たちの影響を受けることなく、若いブラームスの自由でのびやかな旋律とビオラとチェロを中心とした重厚な音色が特徴の名曲です。</p>
+  27歳の時に書かれたこの作品は、古典派の巨匠たちの影響を受けることなく、若いブラームスの自由でのびやかな旋律と、ビオラとチェロを中心とした重厚な音色が特徴の"名曲"です。</p>
 </div>
   </div>
 
-  <div class="border-yellow">
+  <div class="border-blue">
     <h2 class="program-title" onclick="toggleDetails('open6')">ヴェーベルン<br>弦楽四重奏のための緩徐楽章</h2>
   <div id="open6" class="details-content">
     <div class="wrapper">
@@ -373,7 +384,7 @@
     <h2>~ 休憩 ~</h2>
   </div>
 
-  <div class="border-blue">
+  <div class="border-yellow">
     <h2 class="program-title" onclick="toggleDetails('open7')">メンデルスゾーン<br>弦楽八重奏曲<br>第1,4楽章</h2>
     <div id="open7" class="details-content">
       <div class="wrapper">
@@ -422,10 +433,9 @@
 </div>
 
   <div class = "wrapper"><h3>本日はお越しいただき誠にありがとうございました。</h3></div>
- 
 
       <div class = "footcolor">
-      <p><b>連絡先(勝又)</b>
+      <p><b>連絡先（勝又）</b>
         <br>katsumata.tokachi.n4(at)elms.hokudai.ac.jp
         <br>※(at)を@に読み替えてください。
       </p>
